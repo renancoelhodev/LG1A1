@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> //AAAAAAAAAAAAAAA
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
@@ -12,7 +12,7 @@ typedef struct{
 } 
 cadastro;
 
-//VARI¡VEIS GLOBAIS//
+//VARI√ÅVEIS GLOBAIS//
 
 cadastro cdstr;
 char opcao;
@@ -22,10 +22,10 @@ void gravaDados (void){
 	
 	FILE *arq;
 	
-	arq = fopen ("palavras.dat", "a"); // Abre um arquivo texto para gravaÁ„o e leitura. 
-								   	   // Os dados ser„o adicionados no fim do arquivo se ele j· existir, 
-									   // ou um novo arquivo ser· criado, no caso de arquivo n„o existente anteriormente.
-	if (arq == NULL){ // caso o arquivo dÍ erro
+	arq = fopen ("palavras.dat", "a"); // Abre um arquivo texto para grava√ß√£o e leitura. 
+								   	   // Os dados ser√£o adicionados no fim do arquivo se ele j√° existir, 
+									   // ou um novo arquivo ser√° criado, no caso de arquivo n√£o existente anteriormente.
+	if (arq == NULL){ // caso o arquivo d√™ erro
 		system("cls");
 		printf("Ocorreu um erro ao gravar dados no arquivo PALAVRAS.DAT");
 	}
@@ -63,9 +63,9 @@ void leDados (void){
 		printf("Ocorreu um erro ao ler o arquivo PALAVRAS.DAT");
 	}
 		else{
-			while(!feof(arq)){ // Enquanto n„o houver o tÈrmino do arquivo 
-				fread(&cdstr, sizeof(cdstr), 1, arq); // … lido todo o arquivo
-					if(!feof(arq)){	// se n„o houver o tÈrmino do arquivo, faÁa:
+			while(!feof(arq)){ // Enquanto n√£o houver o t√©rmino do arquivo 
+				fread(&cdstr, sizeof(cdstr), 1, arq); // √â lido todo o arquivo
+					if(!feof(arq)){	// se n√£o houver o t√©rmino do arquivo, fa√ßa:
 						printf("\nPISTA:[%16s]", cdstr.pista);
 						printf("   QTD:[%2d]", cdstr.qtd);
 						printf("	   PALAVRAS:[%16s] [%16s] [%16s]", cdstr.vetpalavras[0], cdstr.vetpalavras[1], cdstr.vetpalavras[2]);
